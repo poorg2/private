@@ -1,0 +1,522 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local LoginGUI = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Pass = Instance.new("TextBox")
+local Login = Instance.new("TextButton")
+local User = Instance.new("TextBox")
+local barframe = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local mainframe = Instance.new("Frame")
+local barline = Instance.new("Frame")
+local instantrichbutton = Instance.new("TextButton")
+local antiafkbutton = Instance.new("TextButton")
+local note1 = Instance.new("TextLabel")
+local note2 = Instance.new("TextLabel")
+local note3 = Instance.new("TextLabel")
+local mainbutton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LoginGUI.Name = "LoginGUI"
+LoginGUI.Parent = ScreenGui
+LoginGUI.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+LoginGUI.BorderColor3 = Color3.fromRGB(152, 0, 0)
+LoginGUI.Position = UDim2.new(0.346007586, 0, 0.212933749, 0)
+LoginGUI.Size = UDim2.new(0, 348, 0, 426)
+
+Bar.Name = "Bar"
+Bar.Parent = LoginGUI
+Bar.BackgroundColor3 = Color3.fromRGB(235, 0, 0)
+Bar.BorderColor3 = Color3.fromRGB(161, 0, 0)
+Bar.Size = UDim2.new(0, 348, 0, 31)
+
+TextLabel.Parent = Bar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0316091999, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 185, 0, 31)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "Blending Simulator Login"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 16.000
+
+TextLabel_2.Parent = LoginGUI
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.456896544, 0, 0.225352108, 0)
+TextLabel_2.Size = UDim2.new(0, 29, 0, 40)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "To continue any further. Please Enter Key to Continue!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 12.000
+
+Pass.Name = "Pass"
+Pass.Parent = LoginGUI
+Pass.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Pass.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pass.Position = UDim2.new(0.229885057, 0, 0.387323946, 0)
+Pass.Size = UDim2.new(0, 187, 0, 34)
+Pass.Font = Enum.Font.SourceSans
+Pass.Text = "Enter Key Here!"
+Pass.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pass.TextSize = 14.000
+
+Login.Name = "Login"
+Login.Parent = LoginGUI
+Login.BackgroundColor3 = Color3.fromRGB(198, 0, 0)
+Login.BorderColor3 = Color3.fromRGB(168, 0, 0)
+Login.Position = UDim2.new(0.212643683, 0, 0.776995301, 0)
+Login.Size = UDim2.new(0, 200, 0, 50)
+Login.Font = Enum.Font.Arcade
+Login.Text = "Enter Key"
+Login.TextColor3 = Color3.fromRGB(255, 255, 255)
+Login.TextSize = 17.000
+
+User.Name = "User"
+User.Parent = LoginGUI
+User.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+User.BorderColor3 = Color3.fromRGB(0, 0, 0)
+User.Position = UDim2.new(0.229885057, 0, 0.50234741, 0)
+User.Size = UDim2.new(0, 187, 0, 34)
+User.Font = Enum.Font.SourceSans
+User.Text = "Enter the Buyer's Username"
+User.TextColor3 = Color3.fromRGB(255, 255, 255)
+User.TextSize = 14.000
+
+barframe.Name = "barframe"
+barframe.Parent = ScreenGui
+barframe.BackgroundColor3 = Color3.fromRGB(226, 0, 0)
+barframe.BorderColor3 = Color3.fromRGB(179, 0, 0)
+barframe.Position = UDim2.new(0.34505704, 0, 0.364353299, 0)
+barframe.Size = UDim2.new(0, 348, 0, 24)
+barframe.Visible = false
+
+TextLabel_3.Parent = barframe
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0344827548, 0, 0.0362903178, 0)
+TextLabel_3.Size = UDim2.new(0, 173, 0, 21)
+TextLabel_3.Font = Enum.Font.Arcade
+TextLabel_3.Text = "Blending Simulator"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 16.000
+
+mainframe.Name = "mainframe"
+mainframe.Parent = barframe
+mainframe.BackgroundColor3 = Color3.fromRGB(226, 0, 0)
+mainframe.BorderColor3 = Color3.fromRGB(176, 0, 0)
+mainframe.Position = UDim2.new(0, 0, 0.958333969, 0)
+mainframe.Size = UDim2.new(0, 348, 0, 275)
+
+barline.Name = "barline"
+barline.Parent = barframe
+barline.BackgroundColor3 = Color3.fromRGB(226, 0, 0)
+barline.BorderColor3 = Color3.fromRGB(191, 0, 0)
+barline.Position = UDim2.new(0.0344827585, 0, 1.41666734, 0)
+barline.Size = UDim2.new(0, 105, 0, 251)
+
+instantrichbutton.Name = "instantrichbutton"
+instantrichbutton.Parent = barframe
+instantrichbutton.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+instantrichbutton.BorderColor3 = Color3.fromRGB(143, 0, 0)
+instantrichbutton.Position = UDim2.new(0.385133922, 0, 1.67902184, 0)
+instantrichbutton.Size = UDim2.new(0, 194, 0, 16)
+instantrichbutton.Font = Enum.Font.Arcade
+instantrichbutton.Text = "Be rich instantly"
+instantrichbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+instantrichbutton.TextSize = 14.000
+instantrichbutton.MouseButton1Down:connect(function()
+
+	local args = {
+		[1] = "Money",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Xp",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "RebirthTokens",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PlaytimeSeconds",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Robots",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "robotlevel",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "rushhoursummon",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "volcanosummon",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "TotalCashEarned",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "TotalXpEarned",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "ItemMultiPlier",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Rebirths",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "CoinMultiplier",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "NpcMultiplier",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "UpgradeCoins",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Level",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "BackpackCapacity",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "BagCapacity",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Rating",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "DriveThruLevel",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "DailyRewardClaimed",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Crate1",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Crate2",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Crate3",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Crate4",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Crate5",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "SleighDrop",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "RushHourSummon",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "MythicRushHour",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "TotalCratesBought",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "goldhoursummon",
+		[2] = 1000000000000000,
+		[3] = "DK$jhd&*IUDHbeyu876#%4s4"
+	}
+
+	game:GetService("ReplicatedStorage").Upgrades:FireServer(unpack(args))
+	wait(0.1)
+
+end)
+
+antiafkbutton.Name = "antiafkbutton"
+antiafkbutton.Parent = barframe
+antiafkbutton.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+antiafkbutton.BorderColor3 = Color3.fromRGB(143, 0, 0)
+antiafkbutton.Position = UDim2.new(0.385133922, 0, 2.76235533, 0)
+antiafkbutton.Size = UDim2.new(0, 194, 0, 16)
+antiafkbutton.Font = Enum.Font.Arcade
+antiafkbutton.Text = "Anti-Afk"
+antiafkbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiafkbutton.TextSize = 14.000
+antiafkbutton.MouseButton1Down:connect(function()
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end)
+
+note1.Name = "note1"
+note1.Parent = barframe
+note1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+note1.BackgroundTransparency = 1.000
+note1.Position = UDim2.new(0.534482777, 0, 11.166667, 0)
+note1.Size = UDim2.new(0, 90, 0, 6)
+note1.Font = Enum.Font.GothamBold
+note1.Text = "Using the instant rich button may"
+note1.TextColor3 = Color3.fromRGB(255, 255, 255)
+note1.TextSize = 13.000
+
+note2.Name = "note2"
+note2.Parent = barframe
+note2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+note2.BackgroundTransparency = 1.000
+note2.Position = UDim2.new(0.534482777, 0, 11.625, 0)
+note2.Size = UDim2.new(0, 90, 0, 6)
+note2.Font = Enum.Font.GothamBold
+note2.Text = "take a while to finish so probbably"
+note2.TextColor3 = Color3.fromRGB(255, 255, 255)
+note2.TextSize = 13.000
+
+note3.Name = "note3"
+note3.Parent = barframe
+note3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+note3.BackgroundTransparency = 1.000
+note3.Position = UDim2.new(0.531609178, 0, 12.166667, 0)
+note3.Size = UDim2.new(0, 91, 0, 0)
+note3.Font = Enum.Font.GothamBold
+note3.Text = "consider leaving the game. it should save"
+note3.TextColor3 = Color3.fromRGB(255, 255, 255)
+note3.TextSize = 11.000
+
+mainbutton.Name = "mainbutton"
+mainbutton.Parent = barframe
+mainbutton.BackgroundColor3 = Color3.fromRGB(222, 0, 0)
+mainbutton.BorderColor3 = Color3.fromRGB(143, 0, 0)
+mainbutton.Position = UDim2.new(0.0604213178, 0, 1.67902207, 0)
+mainbutton.Size = UDim2.new(0, 86, 0, 16)
+mainbutton.Font = Enum.Font.Arcade
+mainbutton.Text = "Main"
+mainbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+mainbutton.TextSize = 14.000
+
+-- Scripts:
+
+local function WLZEO_fake_script() -- Login.LocalScript 
+	local script = Instance.new('LocalScript', Login)
+
+	local UserData = script.Parent.Parent.User -- this is the variable for the 'username' textbox. 
+	local button = script.Parent -- this is a variable for the Button.
+	local UserPass = script.Parent.Parent.Pass -- this is a variable for the 'Password' textbox
+	local End = script.Parent.Parent.Parent.barframe -- rename Hackz to ur frame u want to open after logging in.
+	button.MouseButton1Click:Connect(function() -- will run the script down below after clicking the button
+		if UserData.Text == "AmongUsBlend209" and UserPass.Text == "Encr5y()*lol" then -- change noob and 111 to a username and password u want
+			End.Visible = true  -- makes the hack frame visible after logging in.
+			wait(1) -- waits one second.
+			script.Parent.Parent.Visible = false -- makes the login frame invisible after logging in.
+		else -- if the pass or username is wrong it will run the script down below
+			button.Text = "Wrong Lol" -- changes the text to invalid info
+			wait(0.5) -- waits 0,5 secs
+			button.Text = "bro just give up" -- changes the text to try again
+			wait(0.5) -- waits another 0,5 secs
+			button.Text = "Login" -- changes the text back to login
+		end -- ends the if statement
+	end) -- ends the button function
+	
+	
+	-- fully scripted by NTO EXPLOITS on youtube -- 
+end
+coroutine.wrap(WLZEO_fake_script)()
+local function CYHBLXT_fake_script() -- barframe.Draggable 
+	local script = Instance.new('LocalScript', barframe)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(CYHBLXT_fake_script)()
